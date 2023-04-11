@@ -7,7 +7,7 @@ from fastapi.testclient import TestClient
 
 def test_make_prediction(client: TestClient, test_data: pd.DataFrame) -> None:
     # Given
-    print(test_data
+    print(test_data)
     payload = {
         # ensure pydantic plays well with np.nan
         "inputs": test_data.replace({np.nan: None}).to_dict(orient="records")
