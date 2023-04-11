@@ -92,13 +92,6 @@ price_pipe = Pipeline(
                 mappings=config.model_config.garage_mappings,
             ),
         ),
-        # == CATEGORICAL ENCODING
-        (
-            "rare_label_encoder",
-            RareLabelEncoder(
-                tol=0.01, n_categories=1, variables=config.model_config.categorical_vars
-            ),
-        ),
         # encode categorical variables using the target mean
         (
             "categorical_encoder",
